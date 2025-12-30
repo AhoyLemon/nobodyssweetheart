@@ -48,6 +48,41 @@ nav {
       animation: floatBounce 2.8s ease-in-out infinite;
     }
   }
+  .eyeball {
+    width: 2.8%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    // background-color: lime;
+    // opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    &.left {
+      top: 51%;
+      left: 26.75%;
+    }
+    &.right {
+      top: 46.2%;
+      left: 40%;
+    }
+    .pupil {
+      position: absolute;
+      width: 32%;
+      aspect-ratio: 1/1;
+      top: 5px;
+      right: 5px;
+      transform-origin: 1px;
+      border-radius: 50%;
+      background-color: #101010;
+      &.left {
+        top: 11px;
+        right: 9px;
+      }
+      &.right {
+        top: 9px;
+        right: 16px;
+      }
+    }
+  }
   .nav-item {
     position: absolute;
     background-size: contain;
@@ -102,6 +137,10 @@ nav {
       background-image: url(../img/contact.png);
       animation: floatDip 3.3s ease-in-out infinite 0.8s;
       aspect-ratio: 296/93;
+      &:hover {
+        scale: 1.1;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+      }
     }
 
     &:has(a:hover) {
