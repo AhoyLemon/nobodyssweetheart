@@ -48,7 +48,7 @@ nav {
       animation: floatBounce 2.8s ease-in-out infinite;
     }
   }
-  a {
+  .nav-item {
     position: absolute;
     background-size: contain;
     background-position: center;
@@ -58,19 +58,42 @@ nav {
       width: 44%;
       left: 48%;
       top: 55%;
-      background-image: url(../img/portfolio.png);
+      background-image: url(../svg/portfolio.svg);
       transform-origin: bottom left;
       animation: floatSway 3.5s ease-in-out infinite 0.5s;
       aspect-ratio: 541/174;
+      a {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 54%;
+        height: 85%;
+        // opacity: 0.5;
+        // background-color: lime;
+        border-radius: 40%;
+      }
     }
     &.store {
       width: 30%;
       left: 48%;
       top: 82%;
-      background-image: url(../img/store.png);
+      background-image: url(../svg/store.svg);
       aspect-ratio: 296/93;
       transform-origin: top left;
       animation: floatWobble 4.2s ease-in-out infinite 1s;
+      a {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        top: 2%;
+        width: 60%;
+        height: 96%;
+        // opacity: 0.5;
+        // background-color: lime;
+        border-radius: 40%;
+      }
     }
     &.contact {
       width: 15%;
@@ -81,7 +104,7 @@ nav {
       aspect-ratio: 296/93;
     }
 
-    &:hover {
+    &:has(a:hover) {
       scale: 1.1;
       filter: drop-shadow(-3px -3px 5px rgba(0, 0, 0, 0.5));
     }

@@ -11,14 +11,16 @@ html(lang="en")
     #app(v-cloak)
 
       header
-        img.nbsh.absolute(src="img/nbsh.png", alt="NBSH Logo")
+        img.nbsh.absolute(src="svg/nbsh.svg", alt="NobodysSweetheart.com")
       main
         nav
-          img.composed(src="img/composed.png", alt="Composed Logo")
-          img.tigerhead.absolute(src="img/tigerhead.png")
-          img.dynamoe.absolute(src="img/dynamoe.png", alt="Dynamo Eye Logo")
-          a.portfolio(href="https://www.behance.net/nobodyssweetheart")
-          a.store(href="https://nobodyssweetheart.bigcartel.com/")
-          a.contact(href="mailto:nobodyssweetheart@gmail.com")
+          img.composed(src="img/composed.png",)
+          img.tigerhead.absolute(src="img/tigerhead-w-pupils.png" alt="Tiger Head")
+          img.dynamoe.absolute(src="img/dynamoe.png", alt="Dyna Moe: Illustration/Comedy")
+          .nav-item.portfolio
+            a(href="https://www.behance.net/nobodyssweetheart" aria-label="Portfolio")
+          .nav-item.store
+            a(href="https://nobodyssweetheart.bigcartel.com/" aria-label="Store")
+          a.nav-item.contact(href="mailto:nobodyssweetheart@gmail.com" aria-label="Contact")
 
     include partials/_javascripts
