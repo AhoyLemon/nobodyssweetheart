@@ -10,9 +10,15 @@ html(lang="en")
   body
     #app(v-cloak)
 
-      main(style="height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem;")
-        .inner
-          h1 {{h1}}
-          h5 {{h5}}
+      header
+        img.nbsh.absolute(src="img/nbsh.png", alt="NBSH Logo")
+      main
+        nav
+          img.composed(src="img/composed.png", alt="Composed Logo")
+          img.tigerhead.absolute(src="img/tigerhead.png")
+          img.dynamoe.absolute(src="img/dynamoe.png", alt="Dynamo Eye Logo")
+          a.portfolio(href="https://www.behance.net/nobodyssweetheart")
+          a.store(href="https://nobodyssweetheart.bigcartel.com/")
+          a.contact(href="mailto:nobodyssweetheart@gmail.com")
 
     include partials/_javascripts

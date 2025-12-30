@@ -1,0 +1,163 @@
+main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-position: center;
+}
+header {
+  img {
+    position: absolute;
+    width: 80dvw;
+    left: 10dvw;
+    top: 3dvh;
+    animation: gentleFloat 4s ease-in-out infinite;
+  }
+}
+nav {
+  aspect-ratio: 16/9;
+  max-height: 80dvh;
+  position: relative;
+  img {
+    &.composed {
+      display: block;
+      opacity: 0;
+    }
+    &.absolute {
+      position: absolute;
+      // opacity: 0.5;
+    }
+    &.tigerhead {
+      width: 43%;
+      left: 9%;
+      top: 13%;
+    }
+    &.nbsh {
+      width: 98%;
+      left: 1%;
+      top: 2%;
+    }
+    &.dynamoe {
+      width: 37%;
+      left: 49%;
+      top: 23%;
+      transform-origin: bottom left;
+      animation: floatBounce 2.8s ease-in-out infinite;
+    }
+  }
+  a {
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: scale 0.3s ease-in-out, filter 0.3s linear;
+    &.portfolio {
+      width: 44%;
+      left: 48%;
+      top: 55%;
+      background-image: url(../img/portfolio.png);
+      transform-origin: bottom left;
+      animation: floatSway 3.5s ease-in-out infinite 0.5s;
+      aspect-ratio: 541/174;
+    }
+    &.store {
+      width: 30%;
+      left: 48%;
+      top: 82%;
+      background-image: url(../img/store.png);
+      aspect-ratio: 296/93;
+      transform-origin: top left;
+      animation: floatWobble 4.2s ease-in-out infinite 1s;
+    }
+    &.contact {
+      width: 15%;
+      left: 10%;
+      top: 87%;
+      background-image: url(../img/contact.png);
+      animation: floatDip 3.3s ease-in-out infinite 0.8s;
+      aspect-ratio: 296/93;
+    }
+
+    &:hover {
+      scale: 1.1;
+      filter: drop-shadow(-3px -3px 5px rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
+@keyframes floatBounce {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1.5deg) scale(1.005);
+  }
+  50% {
+    transform: rotate(1deg) scale(1.01);
+  }
+  75% {
+    transform: rotate(-0.5deg) scale(1.005);
+  }
+}
+
+@keyframes floatSway {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    transform: rotate(-2deg) scale(1.01);
+  }
+  66% {
+    transform: rotate(2deg) scale(1.005);
+  }
+}
+
+@keyframes floatWobble {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  30% {
+    transform: rotate(1.5deg) scale(1.01);
+  }
+  60% {
+    transform: rotate(-2deg) scale(0.995);
+  }
+  80% {
+    transform: rotate(1deg) scale(1.005);
+  }
+}
+
+@keyframes floatDip {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(-8px) translateX(3px);
+  }
+  40% {
+    transform: translateY(-18px) translateX(-2px);
+  }
+  60% {
+    transform: translateY(-22px) translateX(2px);
+  }
+  80% {
+    transform: translateY(-10px) translateX(-3px);
+  }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2dvh);
+  }
+}
