@@ -57,22 +57,25 @@ nav {
     position: absolute;
     top: 50%;
     &.left {
-      top: 51%;
+      top: 51.1%;
       left: 26.75%;
     }
     &.right {
-      top: 46.2%;
-      left: 40%;
+      top: 46.3%;
+      left: 40.4%;
+      // background-color: lime;
+      // opacity: 0.5;
     }
     .pupil {
       position: absolute;
       width: 32%;
       aspect-ratio: 1/1;
       top: 5px;
-      right: 5px;
+      right: 10px;
       transform-origin: 1px;
       border-radius: 50%;
       background-color: #101010;
+      transition: transform 0.15s ease-out;
       &.left {
         top: 11px;
         right: 9px;
@@ -80,6 +83,22 @@ nav {
       &.right {
         top: 9px;
         right: 16px;
+      }
+    }
+    .shine {
+      position: absolute;
+      width: 32%;
+      aspect-ratio: 1/1;
+      background-color: white;
+      opacity: 0.65;
+      border-radius: 50%;
+      &.left {
+        top: 16%;
+        right: 3%;
+      }
+      &.right {
+        top: 5%;
+        right: 38%;
       }
     }
   }
