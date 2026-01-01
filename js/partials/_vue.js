@@ -12,11 +12,10 @@ const app = createApp({
       // Eye tracking functionality
       // Adjust this value to control pupil sensitivity (higher = less sensitive, needs more distance to reach edge)
       const pupilSensitivity = 22;
-
-      const leftPupil = document.getElementById("leftPupil");
-      const rightPupil = document.getElementById("rightPupil");
-      const leftEyeball = document.querySelector(".eyeball.left");
-      const rightEyeball = document.querySelector(".eyeball.right");
+      const leftEyeball = document.getElementById("LeftEyeball");
+      const rightEyeball = document.getElementById("RightEyeball");
+      const leftPupil = document.getElementById("LeftPupil");
+      const rightPupil = document.getElementById("RightPupil");
 
       if (leftPupil && rightPupil && leftEyeball && rightEyeball) {
         document.addEventListener("mousemove", (e) => {
