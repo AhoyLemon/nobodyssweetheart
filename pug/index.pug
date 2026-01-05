@@ -1,4 +1,4 @@
-- const testing = true
+- const testing = false
 include partials/_variables
 include partials/_mixins
 
@@ -11,10 +11,11 @@ html(lang="en")
     #app(v-cloak)
 
       header
-        img.nbsh.absolute(src="svg/nbsh.svg", alt="NobodysSweetheart.com")
-      main
-        nav
-          img.composed(src="img/composed.png",)
+        img.nbsh.absolute(src="svg/nbsh.svg" alt="NobodysSweetheart.com")
+      main.home
+        nav.home
+          //- img.composed(src="img/composed.png",)
+          //- .rectangle
           img.tigerhead.absolute(src="img/tigerhead2.png" alt="Tiger Head")
           //img.tigerhead.absolute(src="img/tigerhead.png" alt="Tiger Head")
           .eyeball.left#LeftEyeball
@@ -23,7 +24,9 @@ html(lang="en")
           .eyeball.right#RightEyeball
             .pupil.right#RightPupil 
             .shine.right
-          img.dynamoe.absolute(src="img/dynamoe.png", alt="Dyna Moe: Illustration/Comedy")
+          //img.dynamoe.absolute(src="img/dynamoe.png" alt="Dyna Moe: Illustration/Comedy")
+          .nav-item.about
+            a(href=siteURL+"/about" aria-label="About")
           .nav-item.portfolio
             a(href="https://www.behance.net/nobodyssweetheart" aria-label="Portfolio")
           .nav-item.store

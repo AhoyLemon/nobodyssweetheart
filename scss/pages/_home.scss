@@ -1,35 +1,29 @@
-main {
+main.home {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #ff321c;
-  background-image: url(../img/background.png);
-  background-size: cover;
+  background-image: url(../img/background_tile.png);
+  background-repeat: repeat;
   background-position: center;
 }
-header {
-  img {
-    position: absolute;
-    width: 80dvw;
-    left: 10dvw;
-    top: 3dvh;
-    animation: gentleFloat 4s ease-in-out infinite;
-  }
-}
-nav {
+nav.home {
+  // aspect-ratio: 16/9;
+  // width: 100%;
+  // max-height: 80dvh;\
+  //background-color: lime;
   aspect-ratio: 16/9;
-  max-height: 80dvh;
+  //max-width: 99dvw;
   position: relative;
+
   img {
     &.composed {
       display: block;
-      opacity: 0;
     }
     &.absolute {
       position: absolute;
-      // opacity: 0.5;
     }
     &.tigerhead {
       width: 43%;
@@ -53,8 +47,6 @@ nav {
     width: 2.8%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    // background-color: lime;
-    // opacity: 0.5;
     position: absolute;
     top: 50%;
     &.left {
@@ -64,8 +56,6 @@ nav {
     &.right {
       top: 46.3%;
       left: 40.4%;
-      // background-color: lime;
-      // opacity: 0.5;
     }
     .pupil {
       position: absolute;
@@ -109,10 +99,32 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     transition: scale 0.3s ease-in-out, filter 0.3s linear;
+    &.about {
+      width: 36%;
+      left: 50%;
+      top: 23%;
+      background-image: url(../svg/dynamoe.svg);
+      transform-origin: bottom left;
+      aspect-ratio: 77/62;
+      transform-origin: bottom left;
+      animation: floatBounce 2.8s ease-in-out infinite;
+      a {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        top: 0%;
+        width: 90%;
+        height: 59%;
+        opacity: 0.5;
+        // background-color: lime;
+        border-radius: 40%;
+      }
+    }
     &.portfolio {
       width: 44%;
       left: 48%;
-      top: 55%;
+      top: 56.5%;
       background-image: url(../svg/portfolio.svg);
       transform-origin: bottom left;
       animation: floatSway 3.5s ease-in-out infinite 0.5s;
@@ -170,76 +182,14 @@ nav {
   }
 }
 
-@keyframes floatBounce {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-1.5deg) scale(1.005);
-  }
-  50% {
-    transform: rotate(1deg) scale(1.01);
-  }
-  75% {
-    transform: rotate(-0.5deg) scale(1.005);
+@media (min-width: 1300px) {
+  nav.home {
+    height: 750px;
+    max-height: 80dvh;
   }
 }
-
-@keyframes floatSway {
-  0%,
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-  33% {
-    transform: rotate(-2deg) scale(1.01);
-  }
-  66% {
-    transform: rotate(2deg) scale(1.005);
-  }
-}
-
-@keyframes floatWobble {
-  0%,
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-  30% {
-    transform: rotate(1.5deg) scale(1.01);
-  }
-  60% {
-    transform: rotate(-2deg) scale(0.995);
-  }
-  80% {
-    transform: rotate(1deg) scale(1.005);
-  }
-}
-
-@keyframes floatDip {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-  20% {
-    transform: translateY(-8px) translateX(3px);
-  }
-  40% {
-    transform: translateY(-18px) translateX(-2px);
-  }
-  60% {
-    transform: translateY(-22px) translateX(2px);
-  }
-  80% {
-    transform: translateY(-10px) translateX(-3px);
-  }
-}
-
-@keyframes gentleFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2dvh);
+@media (max-width: 1299px) {
+  nav.home {
+    width: 99.9dvw;
   }
 }

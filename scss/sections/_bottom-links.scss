@@ -1,0 +1,23 @@
+.bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1em;
+  font-size: 32px;
+  font-family: $headline;
+  a {
+    color: $yellow;
+    text-decoration: none;
+    text-shadow: 0.05em 0.05em 0 $green;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}

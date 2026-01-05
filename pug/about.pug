@@ -1,0 +1,33 @@
+- const testing = false
+include partials/_variables
+include partials/_mixins
+
+doctype html
+html(lang="en")
+  
+  include partials/_head.pug
+    
+  body
+    #app(v-cloak)
+
+      include partials/_header.pug
+      
+      main.about
+        .inside 
+          aside.pic-holder
+            img(src=siteURL+"/img/mydumbface_sq.jpg" alt="Dyna Moe face")
+          article
+            p Dyna Moe was a member of the first generation of the improv & sketch comedy-focused Upright Citizens Brigade Theatre New York. Starting in 1998, she's been a performer, teacher, director as well as working as the de facto art director designing posters, flyers, advertisements and other promotions for approximately 200 shows in that same period.
+            p She's best known online as an illustrator for AMC television drama #[i Mad Men], illustrating the extremely viral #[b Mad Men Yourself] avatar-maker, writing and illustrating best-selling book #[u Mad Men: The Illustrated World] and illustrating and designing the production's annual calendar for the entire run of the show.
+            p Design and illustration clients include the Producers Guild of America, the City of Long Beach, CA, Lionsgate Television, Comedy Central, Chronicle Books, Random House, Marc Jacobs, The Minneapolis Star Tribune, A Special Thing Records, countless podcasts and individuals.
+            p.p2 She has written and produced multiple web series for defunct platforms #[strong Funny or Die Presents] (HBO), #[strong SuperDeluxe] (Cartoon Network) and #[strong Topic.com]. Her illustrated humor book mocking the cool kids and their various subcultures, #[u Hipster Animals: A Field Guide], came out in 2015 and is currently available in the clearance bin of many fine used bookstores.
+            p Born in Washington, D.C., she has lived in New York, Los Angeles, Seattle and San Diego and plans to move again as soon as the opportunity arises.
+
+        nav.bottom-links
+          a(href=siteURL+"/index.html") Home
+          a(href="https://www.behance.net/nobodyssweetheart") Portfolio
+          a(href="https://nobodyssweetheart.bigcartel.com/") Store
+          a(href="mailto:nobodyssweetheart@gmail.com") Contact
+
+
+    include partials/_javascripts

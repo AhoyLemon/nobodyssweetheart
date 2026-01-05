@@ -1,0 +1,10 @@
+header {
+  img {
+    position: absolute;
+    width: 80dvw;
+    left: 10dvw;
+    top: 3dvh;
+    animation: gentleFloat 4s ease-in-out infinite;
+    z-index: 3;
+  }
+}
