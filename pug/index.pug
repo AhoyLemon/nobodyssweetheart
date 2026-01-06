@@ -8,6 +8,9 @@ html(lang="en")
   include partials/_head.pug
     
   body
+
+    include ../html/comment.html
+
     #app(v-cloak)
 
       header
@@ -30,5 +33,9 @@ html(lang="en")
           .nav-item.store
             a(href="https://nobodyssweetheart.bigcartel.com/" aria-label="Store")
           a.nav-item.contact(href="mailto:nobodyssweetheart@gmail.com" aria-label="Contact")
+      footer.by-lemon
+        p website by 
+          a(href="https://ahoylemon.xyz") Lemon
+          | .
 
     include partials/_javascripts
