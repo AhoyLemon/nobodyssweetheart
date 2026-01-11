@@ -1,32 +1,32 @@
 // COLORS //////////////////////////////////////////////////////////////////////////////////
-$white: #eee;
+$white: #fefefe;
 $black: #212121;
 $blue: #4885ed;
 $red: #ee2a2a;
-$green: #17680f;
-$yellow:#e9eab9;
+$green: #007174;
+$yellow: #ffcc00;
 $teal: #4e7f71;
 
-  // COLOR UTILITIES
-  $body: $white;
-  $copy: $black;
-  $link: $blue;
-  $accent: $teal;
-  $focus: $yellow;
+// COLOR UTILITIES
+$body: $white;
+$copy: $black;
+$link: $blue;
+$accent: $teal;
+$focus: $yellow;
 
 // BRAND COLORS /////////////////////////////////////////////////////////////////////////
-  $color-twitter: #55acee;
-  $color-github: #181616;
-  $color-facebook: #3B5998;
+$color-twitter: #55acee;
+$color-github: #181616;
+$color-facebook: #3b5998;
 
 // FONTS ////////////////////////////////////////////////////////////////////////////////
-$light:300;
-$medium:400;
-$bold:700;
+$light: 300;
+$medium: 400;
+$bold: 700;
 
 // FONT UTILITIES /////////////////////////////////////////////////////////////////////
-$serif: "Palatino", serif;
-$sans-serif: Helvetica, sans-serif;
+$serif: "Roboto", sans-serif;
+$sans-serif: "Roboto", sans-serif;
 $font-family: $sans-serif;
 $headline: $serif;
 

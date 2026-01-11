@@ -6,6 +6,7 @@
 @import "abstracts/z-index";
 @import "abstracts/mixins";
 @import "abstracts/extends";
+@import "abstracts/animations";
 
 // BASE is for things like global site styles and typography.
 @import "base/reset";
@@ -18,9 +19,12 @@
 // LAYOUT is for stuff like a grid system, topnav, footer, etc.
 
 // SECTIONS is a stripe (like a hero section) - like a component, but bigger.
+@import "sections/header";
+@import "sections/bottom-links";
+@import "sections/footer";
 
 // PAGES is for any specific page template
 @import "pages/home";
+@import "pages/about";
 
 // FINALLY, we should have a place for things we still need to get to...
-@import "todo/shame";
