@@ -12,6 +12,7 @@ html(lang="en")
     #app(v-cloak)
 
       include partials/_header.pug
+      link(rel="canonical" href=siteURL+"/about")
       
       main.about
         .inside 
@@ -26,4 +27,4 @@ html(lang="en")
 
         include partials/_footer.pug
 
-    include partials/_javascripts
+    include partials/_javascripts 
