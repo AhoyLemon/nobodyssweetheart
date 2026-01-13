@@ -71,3 +71,12 @@
     transform: translateY(-2dvh);
   }
 }
+
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0deg) translateY(-15px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-15px);
+  }
+}
