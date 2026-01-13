@@ -1,0 +1,34 @@
+- const testing = false
+include partials/_variables
+include partials/_mixins
+
+doctype html
+html(lang="en")
+  
+  include partials/_head.pug
+  meta(name="robots" content="noindex, follow")
+  meta(http-equiv="status" content="404")
+    
+  body
+
+    include ../html/comment.html
+
+    #app(v-cloak)
+      main.error-404
+        .inside 
+          aside.pic-holder 
+            img.leopard.absolute(src="/img/leopard-2.png" alt="Leopard Head")
+            .eyeball.left#LeftEyeball
+              .pupil.left#LeftPupil
+              .shine.left
+            .eyeball.right#RightEyeball
+              .pupil.right#RightPupil  
+              .shine.right
+          section
+            figure.bubble-holder
+              img.bubble-404(src="/svg/404.svg" alt="404!")
+            h2 Page doesn't exist.
+            p 
+              a(href=siteURL aria-label="Go to Homepage") Return to the homepage.
+
+    include partials/_javascripts
